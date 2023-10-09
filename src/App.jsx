@@ -1,3 +1,4 @@
+import ZaloIcon from "./components/ZaloIcon";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 import Main from "./layouts/Main";
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Main />
       <Footer />
+      <ZaloIcon />
     </div>
   );
 }
