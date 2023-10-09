@@ -5,7 +5,7 @@ function Client() {
     <div>
       {/* Clients Section - Home Page */}
       <section id="clients" className="clients">
-        <div className="container-fluid" data-aos="fade-up">
+        <div className="container-fluid" >
           <div className="row gy-4">
             <div className="col-xl-2 col-md-3 col-6 client-logo">
               <img

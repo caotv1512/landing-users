@@ -8,10 +8,39 @@ function Hero() {
       {/* Hero Section - Home Page */}
       <section id="hero" className="hero">
         <img
-          src="../../public/assets/img/hero-bg.jpg"
+          src="assets/img/background/2.jpg"
+          className="img-fluid"
           alt=""
           // data-aos="fade-in"
         />
+        {/* <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src="assets/img/hero-bg.jpg" alt="Slide 1" />
+            </div>
+            <div className="carousel-item">
+              <img src="path_to_image2.jpg" alt="Slide 2" />
+            </div>
+            <div className="carousel-item">
+              <img src="path_to_image3.jpg" alt="Slide 3" />
+            </div>
+          </div>
+          <a
+            className="carousel-control-prev"
+            href="#myCarousel"
+            data-slide="prev"
+          >
+            <span className="carousel-control-prev-icon"></span>
+          </a>
+          <a
+            className="carousel-control-next"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span className="carousel-control-next-icon"></span>
+          </a>
+        </div> */}
+
         <div className="container">
           <div className="row">
             <div className="col-lg-10">
