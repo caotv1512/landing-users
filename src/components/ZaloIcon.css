@@ -1,0 +1,65 @@
+/* CSS cho biểu tượng Zalo */
+.zalo-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    animation: shake 0.5s infinite; /* Sử dụng animation "shake" */
+  }
+  
+  /* Animation shake */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(5deg); }
+    50% { transform: translateX(5px) rotate(-5deg); }
+    75% { transform: translateX(-5px) rotate(5deg); }
+    100% { transform: translateX(0); }
+  }
+  
+  .zalo-icon.active {
+    z-index: 1001;
+    animation: none; /* Tắt animation khi modal được mở */
+  }
+/* CSS cho form */
+.zalo-modal {
+    z-index: 1; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  
+  /* Hiển thị form khi được kích hoạt */
+  .zalo-modal.active {
+    display: block;
+  }
+  
+  /* Style cho input */
+  .zalo-modal.active input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Style cho button */
+  .zalo-modal.active button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  
+  /* Style cho button khi hover */
+  .zalo-modal.active button:hover {
+    background-color: #0056b3;
+  }
+    

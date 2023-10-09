@@ -11,6 +11,9 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+html {
+  behavior:smooth!important;
+}
 :root {
   --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Montserrat", sans-serif;
@@ -829,6 +832,7 @@ section {
 }
 
 .hero .container {
+  text-align: left;
   position: relative;
   z-index: 3;
 }

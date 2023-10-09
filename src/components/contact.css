@@ -1,0 +1,15 @@
+/* Định dạng thông báo thành một hộp nền màu và căn giữa văn bản */
+div.sent-messagees {
+    background-color: #4CAF50; /* Màu nền xanh lá cây */
+    color: white; /* Màu văn bản trắng */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 10px; /* Khoảng cách giữa nội dung và biên */
+    border-radius: 5px; /* Bo góc cho giao diện mềm mại */
+  }
+  
+  /* Tùy chỉnh font và kích thước văn bản */
+  div.sent-messagees p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
