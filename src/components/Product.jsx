@@ -12,41 +12,41 @@ function Product() {
     {
       name: "Product 2",
       image:
-        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+        "assets/img/products/z4766755742185_013ec7f2bd1517d4c0d65c747b48b6dd.jpg",
       description: "Product 2 description",
       category: 2,
     },
     {
       name: "Product 3",
       image:
-        "assets/img/products/z4766755742185_013ec7f2bd1517d4c0d65c747b48b6dd.jpg",
+        "assets/img/products/z4766755727314_8bb1748a083044003a756e969693077a.jpg",
       description: "Product 3 description",
       category: 3,
     },
     {
       name: "Product 4",
       image:
-        "assets/img/products/z4766755737485_7086408ab3c3cecb7e348ec71031e3c7.jpg",
+        "assets/img/products/z4766755661425_d574674ecc8136b5c20f41a0fb35b78d.jpg",
       description: "Product 4 description",
       category: 1,
     },
     {
       name: "Product 5",
       image:
-        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+        "assets/img/products/z4766755717879_6eff115ad107c4d2bece079293c5a9d2.jpg",
       description: "Product 5 description",
       category: 2,
     },
     {
       name: "Product 6",
-      image: "assets/img/masonry-portfolio/masonry-portfolio-6.jpg",
+      image: "assets/img/products/z4766755621301_f80beb60572cc190dad5e922b6032aed.jpg",
       description: "Product 6 description",
       category: 3,
     },
     {
       name: "Product 1",
       image:
-        "assets/img/products/z4766755517684_99fdf85dd944ec3c3ac6757998f3be93.jpg",
+        "assets/img/products/z4766755668262_1ba5eee1011b5077038e331fa04101f3.jpg",
       description: "Product 1 description",
       category: 1,
     },
@@ -67,20 +67,20 @@ function Product() {
     {
       name: "Product 4",
       image:
-        "assets/img/products/z4766755737485_7086408ab3c3cecb7e348ec71031e3c7.jpg",
+        "assets/img/products/z4766755650877_f2fc8bacb5541b67c5a406c86f981858.jpg",
       description: "Product 4 description",
       category: 1,
     },
     {
       name: "Product 5",
       image:
-        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+        "assets/img/products/z4766755753846_b24e9b221f4452d376ba3c1285ebad01.jpg",
       description: "Product 5 description",
       category: 2,
     },
     {
       name: "Product 6",
-      image: "assets/img/masonry-portfolio/masonry-portfolio-6.jpg",
+      image: "assets/img/products/z4766755581495_760b95a1ea527e33151ced330b58e5ca.jpg",
       description: "Product 6 description",
       category: 3,
     },
@@ -163,7 +163,7 @@ function Product() {
                 .filter(
                   (product) =>
                     currentCategory === "*" ||
-                    product.category === currentCategory
+                    product.category === parseInt(currentCategory)
                 )
                 .slice(0, displayedProductCount)
                 .map((product, index) => (
@@ -198,14 +198,25 @@ function Product() {
                   </div>
                 ))}
             </div>
-            {displayedProductCount < products.length && (
+            {displayedProductCount <
+              products.filter(
+                (product) =>
+                  currentCategory === "*" ||
+                  product.category === parseInt(currentCategory)
+              ).length && (
               <div className="text-center mt-3">
-                <button className="btn-outline-dark mr-2 rounded-lg " onClick={loadMoreProducts}>
+                <button
+                  className="btn-outline-dark mr-2 rounded-lg "
+                  onClick={loadMoreProducts}
+                >
                   Xem thêm ...
                 </button>
                 {displayedProductCount > initialProductCount && (
-                  <button className="btn-outline-dark ml-1 rounded-lg" onClick={hideProducts}>
-                    Ẩn bớt 
+                  <button
+                    className="btn-outline-dark ml-1 rounded-lg"
+                    onClick={hideProducts}
+                  >
+                    Ẩn bớt
                   </button>
                 )}
               </div>
