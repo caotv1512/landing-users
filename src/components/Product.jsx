@@ -1,292 +1,220 @@
-import React from 'react'
+import React, { useState } from "react";
 
 function Product() {
+  const products = [
+    {
+      name: "Product 1",
+      image:
+        "assets/img/products/z4766755517684_99fdf85dd944ec3c3ac6757998f3be93.jpg",
+      description: "Product 1 description",
+      category: 1,
+    },
+    {
+      name: "Product 2",
+      image:
+        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+      description: "Product 2 description",
+      category: 2,
+    },
+    {
+      name: "Product 3",
+      image:
+        "assets/img/products/z4766755742185_013ec7f2bd1517d4c0d65c747b48b6dd.jpg",
+      description: "Product 3 description",
+      category: 3,
+    },
+    {
+      name: "Product 4",
+      image:
+        "assets/img/products/z4766755737485_7086408ab3c3cecb7e348ec71031e3c7.jpg",
+      description: "Product 4 description",
+      category: 1,
+    },
+    {
+      name: "Product 5",
+      image:
+        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+      description: "Product 5 description",
+      category: 2,
+    },
+    {
+      name: "Product 6",
+      image: "assets/img/masonry-portfolio/masonry-portfolio-6.jpg",
+      description: "Product 6 description",
+      category: 3,
+    },
+    {
+      name: "Product 1",
+      image:
+        "assets/img/products/z4766755517684_99fdf85dd944ec3c3ac6757998f3be93.jpg",
+      description: "Product 1 description",
+      category: 1,
+    },
+    {
+      name: "Product 2",
+      image:
+        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+      description: "Product 2 description",
+      category: 2,
+    },
+    {
+      name: "Product 3",
+      image:
+        "assets/img/products/z4766755742185_013ec7f2bd1517d4c0d65c747b48b6dd.jpg",
+      description: "Product 3 description",
+      category: 3,
+    },
+    {
+      name: "Product 4",
+      image:
+        "assets/img/products/z4766755737485_7086408ab3c3cecb7e348ec71031e3c7.jpg",
+      description: "Product 4 description",
+      category: 1,
+    },
+    {
+      name: "Product 5",
+      image:
+        "assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg",
+      description: "Product 5 description",
+      category: 2,
+    },
+    {
+      name: "Product 6",
+      image: "assets/img/masonry-portfolio/masonry-portfolio-6.jpg",
+      description: "Product 6 description",
+      category: 3,
+    },
+  ];
+
+  const initialProductCount = 6; // Số lượng sản phẩm hiển thị ban đầu
+  const productsPerPage = 3; // Số lượng sản phẩm mỗi lần hiển thị thêm
+
+  const [currentCategory, setCurrentCategory] = useState("*");
+  const [displayedProductCount, setDisplayedProductCount] =
+    useState(initialProductCount);
+
+  const filterProducts = (category) => {
+    setCurrentCategory(category);
+    setDisplayedProductCount(initialProductCount);
+  };
+
+  const loadMoreProducts = () => {
+    setDisplayedProductCount(displayedProductCount + productsPerPage);
+  };
+
+  const hideProducts = () => {
+    if (displayedProductCount > initialProductCount) {
+      setDisplayedProductCount(displayedProductCount - productsPerPage);
+    }
+  };
+
   return (
-    <div>    {/* About Section - Home Page */}
-    <section id="portfolio" className="portfolio">
-      {/*  Section Title */}
-      <div className="container section-title" >
-        <h2>Best Seller</h2>
-        <p>
-          Dưới đây là một số sản phẩm đang được bán chạy nhất trên thị trường hiện nay.
-        </p>
-      </div>
-      {/* End Section Title */}
-      <div className="container">
-        <div
-          className="isotope-layout"
-          data-default-filter="*"
-          data-layout="masonry"
-          data-sort="original-order"
-        >
-          <ul
-            className="portfolio-filters isotope-filters"
-            
-            data-aos-delay={100}
-          >
-            <li data-filter="*" className="filter-active">
-              Tất cả
-            </li>
-            <li data-filter=".filter-app">Phòng ngủ</li>
-            <li data-filter=".filter-product">Phòng khách</li>
-            <li data-filter=".filter-branding">Cầu thang</li>
-          </ul>
-          {/* End Portfolio Filters */}
-          <div
-            className="row gy-4 isotope-container"
-            
-            data-aos-delay={200}
-          >
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img
-                src="assets/img/products/z4766755517684_99fdf85dd944ec3c3ac6757998f3be93.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/products/z4766755527780_20e713a61b9c4658f8adf2f034a9c218.jpg"
-                  title="App 1"
-                  data-gallery="portfolio-gallery-app"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img
-                src="assets/img/products/z4766755775444_0b3916cdbb4dde6e49e47d01b42b8394.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                  title="Product 1"
-                  data-gallery="portfolio-gallery-product"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img
-                src="assets/img/products/z4766755742185_013ec7f2bd1517d4c0d65c747b48b6dd.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="/assets/img/products/z4766755737485_7086408ab3c3cecb7e348ec71031e3c7.jpg"
-                  title="Branding 1"
-                  data-gallery="portfolio-gallery-branding"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img
-                src="assets/img/products/z4766755737485_7086408ab3c3cecb7e348ec71031e3c7.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                  title="App 2"
-                  data-gallery="portfolio-gallery-app"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img
-                src="assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/products/z4766755705497_04695b39fcce62e42b9752f1708e1c34.jpg"
-                  title="Product 2"
-                  data-gallery="portfolio-gallery-product"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-branding"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                  title="App 3"
-                  data-gallery="portfolio-gallery-app"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                  title="Product 3"
-                  data-gallery="portfolio-gallery-product"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-            <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                className="img-fluid"
-                alt=""
-              />
-              <div className="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-branding"
-                  className="glightbox preview-link"
-                >
-                  <i className="bi bi-zoom-in" />
-                </a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  className="details-link"
-                >
-                  <i className="bi bi-link-45deg" />
-                </a>
-              </div>
-            </div>
-            {/* End Portfolio Item */}
-          </div>
-          {/* End Portfolio Container */}
+    <div>
+      <section id="portfolio" className="portfolio">
+        <div className="container section-title">
+          <h2>Best Seller</h2>
+          <p>
+            Dưới đây là một số sản phẩm đang được bán chạy nhất trên thị trường
+            hiện nay.
+          </p>
         </div>
-      </div>
-    </section>
-    {/* End Portfolio Section */}</div>
-  )
+        <div className="container">
+          <div
+            className="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              className="portfolio-filters isotope-filters"
+              data-aos-delay={100}
+            >
+              <li
+                data-filter="*"
+                className={currentCategory === "*" ? "filter-active" : ""}
+                onClick={() => filterProducts("*")}
+              >
+                Tất cả
+              </li>
+              <li
+                data-filter=".filter-app"
+                className={currentCategory === "1" ? "filter-active" : ""}
+                onClick={() => filterProducts("1")}
+              >
+                Phòng ngủ
+              </li>
+              <li
+                data-filter=".filter-product"
+                className={currentCategory === "2" ? "filter-active" : ""}
+                onClick={() => filterProducts("2")}
+              >
+                Phòng khách
+              </li>
+              <li
+                data-filter=".filter-branding"
+                className={currentCategory === "3" ? "filter-active" : ""}
+                onClick={() => filterProducts("3")}
+              >
+                Cầu thang
+              </li>
+            </ul>
+            <div className="row gy-4 isotope-container" data-aos-delay={200}>
+              {products
+                .filter(
+                  (product) =>
+                    currentCategory === "*" ||
+                    product.category === currentCategory
+                )
+                .slice(0, displayedProductCount)
+                .map((product, index) => (
+                  <div
+                    className={`col-lg-4 col-md-6 portfolio-item isotope-item filter-app`}
+                    key={index}
+                  >
+                    <img
+                      src={product.image}
+                      className="img-fluid"
+                      alt={product.name}
+                    />
+                    <div className="portfolio-info">
+                      <h4>{product.name}</h4>
+                      <p>{product.description}</p>
+                      <a
+                        href={product.image}
+                        title={product.name}
+                        data-gallery={`portfolio-gallery-app`}
+                        className="glightbox preview-link"
+                      >
+                        <i className="bi bi-zoom-in" />
+                      </a>
+                      <a
+                        href="portfolio-details.html"
+                        title="More Details"
+                        className="details-link"
+                      >
+                        <i className="bi bi-link-45deg" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+            </div>
+            {displayedProductCount < products.length && (
+              <div className="text-center mt-3">
+                <button className="btn-outline-dark mr-2 rounded-lg " onClick={loadMoreProducts}>
+                  Xem thêm ...
+                </button>
+                {displayedProductCount > initialProductCount && (
+                  <button className="btn-outline-dark ml-1 rounded-lg" onClick={hideProducts}>
+                    Ẩn bớt 
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
-export default Product
+export default Product;

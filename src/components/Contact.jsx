@@ -33,7 +33,7 @@ function Contact() {
       <section id="contact" className="contact">
         {/*  Section Title */}
         <div className="container section-title">
-          <h2>Contact</h2>
+          <h2>Liên hệ</h2>
           <p>
             Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
             consectetur velit
@@ -47,7 +47,7 @@ function Contact() {
                 <div className="col-md-6">
                   <div className="info-item" data-aos-delay={200}>
                     <i className="bi bi-geo-alt" />
-                    <h3>Address</h3>
+                    <h3>Địa Chỉ</h3>
                     <p>Hà Nội</p>
                     <p>123 Phương Canh</p>
                   </div>
@@ -56,7 +56,7 @@ function Contact() {
                 <div className="col-md-6">
                   <div className="info-item" data-aos-delay={300}>
                     <i className="bi bi-telephone" />
-                    <h3>Call Us</h3>
+                    <h3>Điện Thoại</h3>
                     <p>+84 327627261</p>
                     <p>+84 388300798</p>
                   </div>
@@ -74,7 +74,7 @@ function Contact() {
                 <div className="col-md-6">
                   <div className="info-item" data-aos-delay={500}>
                     <i className="bi bi-clock" />
-                    <h3>Open Hours</h3>
+                    <h3>Thời Gian Mở</h3>
                     <p>Monday - Friday</p>
                     <p>9:00AM - 05:00PM</p>
                   </div>
@@ -139,10 +139,10 @@ function Contact() {
                     <div className="error-message" />
                     {isFormSubmitted ? (
                       <div className="sent-messagees">
-                        Your message has been sent. Thank you!
+                        Thông tin liên hệ đã được gửi. Cảm ơn bạn!
                       </div>
                     ) : (
-                      <button type="submit">Send Message</button>
+                      <button type="submit">Gửi</button>
                     )}
                   </div>
                 </div>
