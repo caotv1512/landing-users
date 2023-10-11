@@ -70,13 +70,14 @@ function Footer() {
           </ul>
         </div>
         <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
+          <h4>Liên hệ</h4>
+          <p>123 Phương Canh </p>
+          <p>Hà Nội</p>
+          {/* <p>Việt Nam</p> */}
           <p className="mt-4">
-            <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+            <strong>Phone:</strong> <span>+84 327 627 261</span>
           </p>
+           <p> <strong>Phone:</strong> <span>+84 327 627 261</span></p>
           <p>
             <strong>Email:</strong> <span>info@example.com</span>
           </p>
