@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
-// import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Header() {
-  // const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.pageYOffset;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
 
-  //     // Khi cuộn xuống hơn 100px từ đỉnh trang, ẩn component Header
-  //     if (currentScrollPos > 100) {
-  //       setVisible(false);
-  //     } else {
-  //       setVisible(true);
-  //     }
-  //   };
+      // Khi cuộn xuống hơn 100px từ đỉnh trang, ẩn component Header
+      if (currentScrollPos > 100) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+    };
 
-  //   // Đăng ký sự kiện cuộn trang
-  //   window.addEventListener("scroll", handleScroll);
+    // Đăng ký sự kiện cuộn trang
+    window.addEventListener("scroll", handleScroll);
 
-  //   // Hủy đăng ký sự kiện khi component bị hủy
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+    // Hủy đăng ký sự kiện khi component bị hủy
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div>
-      {/* {visible && ( */}
+       {visible && ( 
       <header
         id="header"
         className="header fixed-top d-flex align-items-center"
@@ -50,7 +50,15 @@ function Header() {
             <nav id="navmenu" className="navmenu">
               <ul>
                 <li>
-                  <a className="active">Trang Chủ</a>
+                  <a
+                    className="active"
+                    onClick={() => {
+                      const element = document.getElementById("hero");
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    Trang Chủ
+                  </a>
                 </li>
                 {/* <li>
                     <a>Services</a>
@@ -59,7 +67,7 @@ function Header() {
                   <a
                     onClick={() => {
                       const element = document.getElementById("portfolio");
-                      element.scrollIntoView({behavior: "smooth"});
+                      element.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     Tất Cả Sản Phẩm
@@ -69,11 +77,7 @@ function Header() {
                   <a
                     onClick={() => {
                       const element = document.getElementById("contact");
-                      element.scrollIntoView({behavior: "smooth"});
-                      // window.scrollTo({
-                      //   top: 1000,
-                      //   behavior: "smooth",
-                      // });
+                      element.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     Đặt Hàng
@@ -93,11 +97,11 @@ function Header() {
             </a>
           </div>
         </header>
-        {/* <Link to="about" smooth={true} duration={500} offset={-100}>
+        <Link to="about" smooth={true} duration={500} offset={-100}>
             Liên hệ
-          </Link> */}
+          </Link>
       </header>
-      {/* )} */}
+      )}
     </div>
   );
 }
