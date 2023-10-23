@@ -10,10 +10,10 @@ function Main() {
   return (
     <div id="main">
       <Hero />
-      <Client />
+      {/* <Client /> */}
       <Product/>
-      <Pag/>
-      <Call/>
+      {/* <Pag/>   */}
+      {/* <Call/> */}
       <Contact/>
     </div>
   );

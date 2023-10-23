@@ -7,7 +7,7 @@ function Hero() {
     <div>
       {/* Hero Section - Home Page */}
       <Carousel showArrows={true} infiniteLoop={true} autoPlay={true}>
-        <div>
+        {/* <div>
           <section id="hero" className="hero">
             <img
               src="assets/img/background/1.jpg"
@@ -43,8 +43,8 @@ function Hero() {
               </div>
             </div>
           </section>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <section id="hero" className="hero">
             <img
               src="assets/img/background/2.jpg"
@@ -52,7 +52,7 @@ function Hero() {
               alt=""
             />
           </section>
-        </div>
+        </div> */}
         <div>
           <section id="hero" className="hero">
             <img

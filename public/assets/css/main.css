@@ -674,6 +674,9 @@ section {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  .carousel.carousel-slider{
+    max-height: 410px
+  }
 }
 
 /*--------------------------------------------------------------
