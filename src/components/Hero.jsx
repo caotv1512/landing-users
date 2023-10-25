@@ -40,20 +40,6 @@ function Hero() {
           </div>
         </section>
       </div>
-      {/* <div>
-          <section id="hero" className="hero">
-            <img
-              src="assets/img/background/2.jpg"
-              className="img-fluid"
-              alt=""
-            />
-          </section>
-        </div> */}
-      {/* <div>
-        <section id="hero" className="hero">
-          <img src="assets/img/background/3.jpg" className="img-fluid" alt="" />
-        </section>
-      </div> */}
       {/* </Carousel> */}
       {/* End Hero Section */}
     </div>
