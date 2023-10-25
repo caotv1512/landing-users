@@ -5,16 +5,18 @@ import Product from "../components/Product";
 import Pag from "../components/Pag";
 import Call from "../components/Call";
 import Contact from "../components/Contact";
+import CustomerRender from "../components/CustomerRender";
 
 function Main() {
   return (
     <div id="main">
       <Hero />
       {/* <Client /> */}
-      <Product/>
+      <Product />
+      <CustomerRender />
       {/* <Pag/>   */}
       {/* <Call/> */}
-      <Contact/>
+      <Contact />
     </div>
   );
 }

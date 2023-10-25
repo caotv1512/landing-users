@@ -674,7 +674,8 @@ section {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
-  .carousel.carousel-slider{
+
+  .carousel.carousel-slider {
     max-height: 410px
   }
 }
@@ -810,7 +811,8 @@ section {
   --background-color: #000000;
   --background-color-rgb: 0, 0, 0;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: auto;
   position: relative;
   padding: 160px 0 80px 0;
   display: flex;
@@ -889,11 +891,37 @@ section {
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  .hero img {
+    max-width: 100%;
+    /* Ảnh sẽ không vượt quá chiều rộng của phần tử chứa nó */
+    /* height: auto; */
+    /* Giữ nguyên tỷ lệ khung hình ban đầu */
+    object-fit: fill;
+    /* Hiển thị toàn bộ ảnh trong phần tử, không quan tâm đến tỷ lệ khung hình */
+  }
+
+  .hero input {
+    width: 80%;
+    height: auto;
+    /* Điều chỉnh chiều rộng của ô input */
+    font-size: 14px;
+    /* Điều chỉnh kích thước chữ trong ô input */
+  }
+
+  .hero input[type="submit"] {
+    width: 30%;
+    /* Điều chỉnh chiều rộng của button */
+    font-size: 14px;
+    /* Điều chỉnh kích thước chữ trong button */
+    padding: 8px 16px;
+    /* Điều chỉnh padding của button để tạo khoảng cách xung quanh nút */
   }
 }
 
