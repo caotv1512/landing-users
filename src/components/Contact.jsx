@@ -49,8 +49,8 @@ function Contact() {
               data-aos-delay={200}
               onSubmit={handleSubmit}
             >
-              <h3>Tiêu đề</h3>
-              <p>nội dung ....</p>
+              <h3>Xưởng Tranh Tráng Gương</h3>
+              <p>Nhận thiết kế theo yêu cầu, tư vấn mẫu phù hợp theo không gian, nội thất căn nhà </p>
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input

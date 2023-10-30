@@ -15,7 +15,7 @@ function Hero() {
               <div className="col-lg-10">
                 <h2 data-aos-delay={100}>Cảm ơn đã tin tưởng. </h2>
                 <p data-aos-delay={200}>
-                  Để lại số điện thoại để chúng tôi ọi tư vấn trực tiếp nhé
+				  Liên hệ với chúng tôi để nhận được khuyến mại mua một tặng một
                 </p>
               </div>
               <div className="col-lg-5">
@@ -27,7 +27,7 @@ function Hero() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Chỉ cần để lại số điện thoại ..."
+                    placeholder="Để lại số điện thoại ..."
                   />
                   <input
                     type="submit"
