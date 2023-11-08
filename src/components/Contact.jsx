@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./contact.css";
+import { baseUrl } from "../server/baseUrl";
+import axios from "axios";
+const DOMAIN_SERVER = baseUrl.domainServer;
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    subject: "",
-    message: "",
+    phone: ""
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -21,6 +22,15 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formData);
+
+    axios
+      .post(DOMAIN_SERVER + "/contact", formData)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     // Simulate sending data to a server (you can replace this with actual API calls)
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -34,10 +44,6 @@ function Contact() {
         {/*  Section Title */}
         <div className="container section-title">
           <h2>Liên hệ</h2>
-          {/* <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-          </p> */}
         </div>
         {/* End Section Title */}
         <div className="container ">
@@ -50,7 +56,10 @@ function Contact() {
               onSubmit={handleSubmit}
             >
               <h3>Xưởng Tranh Tráng Gương</h3>
-              <p>Nhận thiết kế theo yêu cầu, tư vấn mẫu phù hợp theo không gian, nội thất căn nhà </p>
+              <p>
+                Nhận thiết kế theo yêu cầu, tư vấn mẫu phù hợp theo không gian,
+                nội thất căn nhà{" "}
+              </p>
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
@@ -65,12 +74,12 @@ function Contact() {
                 </div>
                 <div className="col-md-6">
                   <input
-                    type="email"
+                    // type="number"
                     className="form-control"
-                    name="email"
+                    name="phone"
                     placeholder="Số điện thoại"
                     required=""
-                    value={formData.email}
+                    value={formData.phone}
                     onChange={handleInputChange}
                   />
                 </div>

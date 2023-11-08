@@ -8,7 +8,7 @@ function Footer() {
         <div className="container footer-top">
           <div className="row gy-4">
             <div className="col-lg-5 col-md-12 footer-about">
-              <a href="index.html" className="logo d-flex align-items-center">
+              <a  className="logo d-flex align-items-center">
                 <span>Tranh 5D</span>
               </a>
               <p>
@@ -20,16 +20,16 @@ function Footer() {
                 may mắn cho gia chủ.
               </p>
               <div className="social-links d-flex mt-4">
-                <a href="">
+                <a>
                   <i className="bi bi-twitter" />
                 </a>
-                <a href="">
+                <a>
                   <i className="bi bi-facebook" />
                 </a>
-                <a href="">
+                <a>
                   <i className="bi bi-instagram" />
                 </a>
-                <a href="">
+                <a>
                   <i className="bi bi-linkedin" />
                 </a>
               </div>
@@ -109,7 +109,6 @@ function Footer() {
       {/* End Footer */}
       {/* Scroll Top Button */}
       <a
-        href="#"
         id="scroll-top"
         className="scroll-top d-flex align-items-center justify-content-center"
       >

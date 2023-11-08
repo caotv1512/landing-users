@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React from "react";
 import "../styles/layout.css";
-
+import { baseUrl } from "../server/baseUrl";
+const DOMAIN_SERVER =baseUrl.domainServer
 function Header() {
+  console.log(DOMAIN_SERVER, '++++');
   // const [visible, setVisible] = useState(true);
 
   // useEffect(() => {
@@ -34,7 +35,6 @@ function Header() {
       >
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a
-            href="index.html"
             className="logo d-flex align-items-center me-auto me-xl-0"
           >
             {/* Uncomment the line below if you also wish to use an image logo */}
@@ -89,6 +89,12 @@ function Header() {
           >
             Liên hệ
           </a>
+
+          {/* <a
+            className="btn-getstarted"
+          >
+            Login
+          </a> */}
         </div>
       </header>
     </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Hero() {
@@ -15,7 +14,7 @@ function Hero() {
               <div className="col-lg-10">
                 <h2 data-aos-delay={100}>Cảm ơn đã tin tưởng. </h2>
                 <p data-aos-delay={200}>
-				  Liên hệ với chúng tôi để nhận được khuyến mại mua một tặng một
+                  Liên hệ với chúng tôi để nhận được khuyến mại mua một tặng một
                 </p>
               </div>
               <div className="col-lg-5">
