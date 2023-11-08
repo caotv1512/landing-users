@@ -20,7 +20,7 @@ function Call() {
                 cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum.
               </p>
-              <a className="cta-btn" href="#">
+              <a className="cta-btn">
                 Call To Action
               </a>
             </div>
