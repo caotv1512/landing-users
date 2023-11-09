@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { baseUrl } from "../server/baseUrl";
 import axios from "axios";
 const DOMAIN_SERVER = baseUrl.domainServer;
@@ -8,7 +8,7 @@ function CustomerRender() {
 
   const fetchProduct = async () => {
     const data = await axios.get(`${DOMAIN_SERVER}/product-customer`);
-    console.log(data);
+    console.log(data.data);
     setProduct(data.data);
   };
   console.log(products);
@@ -34,6 +34,10 @@ function CustomerRender() {
       setDisplayedProductCount(displayedProductCount - productsPerPage);
     }
   };
+  useEffect(() => {
+    fetchProduct();
+  }, []);
+
 
   return (
     <div>
