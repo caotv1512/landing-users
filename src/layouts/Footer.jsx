@@ -84,10 +84,10 @@ function Footer() {
               </p>
               <p>
                 {" "}
-                <strong>Phone:</strong> <span>+84 327 627 261</span>
+                <strong>Phone:</strong> <span>+84 388 300 798</span>
               </p>
               <p>
-                <strong>Email:</strong> <span>info@example.com</span>
+                <strong>Email:</strong> <span>tranh5d@gmail.com</span>
               </p>
             </div>
           </div>
